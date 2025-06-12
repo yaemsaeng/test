@@ -5,8 +5,8 @@ let result = document.getElementById('result')
 form.addEventListener('submit', (event) =>{
     event.preventDefault()
     let el = event.target
-    let x = Number(el.querySelector('[Name="x"]').value)
-    let y = Number(el.querySelector('[Name="y"]').value)
+    let x = el.querySelector('[Name="x"]').valueAsNumber
+    let y = el.querySelector('[Name="y"]').valueAsNumber
     let output
     //console.dir() จะทำให้เราดูข้างในได้ว่าเราใช้อะไรได้บ้าง
     // console.dir(x)
@@ -15,19 +15,19 @@ form.addEventListener('submit', (event) =>{
     console.log(x, y, operator)
     switch (operator) {
         case 'plus':
-            output = x + y
+            output = (x + y)
             break;
     
         case 'minus':
-            output = x - y
+            output = (x - y)
             break;
     
         case 'mutiply':
-            output = x * y
+            output = (x * y)
             break;
     
         case 'divine':
-            output = x / y
+            output = (x / y)
             break;
     }
     result.innerText = output
