@@ -6,7 +6,7 @@ form.addEventListener('submit', (event) =>{
     event.preventDefault()
     let el = event.target
     let x = Number(el.querySelector('[Name="x"]').value)
-    let y = Number(el.querySelector('[Name="x"]').value)
+    let y = Number(el.querySelector('[Name="y"]').value)
     let output
     //console.dir() จะทำให้เราดูข้างในได้ว่าเราใช้อะไรได้บ้าง
     // console.dir(x)
